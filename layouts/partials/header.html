@@ -25,7 +25,10 @@
             background-image: url({{ .Site.BaseURL }}{{ .Site.Params.header_background }});
         }}
        .site-header {
-         background: #2a373d url({{ .Site.BaseURL }}{{ .Site.Params.header_background }}) no-repeat center center;
+         background-color: #2a373d;
+         background-image: url({{ .Site.BaseURL }}{{ .Site.Params.header_background }});
+         background-repeat: no-repeat;
+         background-position: center center;
          z-index: -1;
         }
         </style>
