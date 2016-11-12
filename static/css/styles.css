@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Diplomata+SC');
 @charset "UTF-8";
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
@@ -522,6 +523,7 @@ hr {
   font-size: 74px;
   vertical-align: middle;
   font-weight: 500;
+  font-family: 'Diplomata SC', cursive;
 }
 
 .transparent-layer {
@@ -746,7 +748,7 @@ body.post-template .site-header h2 .logo {
   }
 
   .site-header h2 {
-      font-size: 56px;
+      font-size: 74px;
   }
 }
 @media only screen and (max-width: 719px) {
