@@ -488,12 +488,12 @@ hr {
 
 .author {
   text-align: center;
-  width: 25%;
+  width: 15%;
   float: left;
   margin: 20px 5% 0px 5%; }
 
 .content {
-  width: 60%;
+  width: 70%;
   margin-right: 5%;
   float: right; }
 
@@ -582,6 +582,16 @@ hr {
   font-size: 18px;
   margin-bottom: 40px;
   line-height: 30px; }
+
+.post-img {
+  height: 250px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-color: none;
+  background-size: cover;
+  background-position: center center;
+  margin: 10px 0px 10px 0px;
+}
 
 .share-buttons {
   list-style: none;
@@ -699,6 +709,17 @@ hr {
 .author p.link {
   margin-bottom: 10px; }
 
+.author ul.nav {
+  list-style: none;
+  padding: 0px;
+}
+
+.author ul.nav li {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
 .author ul.social {
   list-style: none;
   display: inline;
@@ -710,6 +731,21 @@ hr {
 .author ul.social li a {
   padding: 5px;
   font-size: 20px; }
+
+ul.taxonomy {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+ul.taxonomy > li h3 {
+  text-transform: uppercase;
+}
+
+ul.task-list {
+  padding: 0px;
+  list-style: none;
+}
 
 .main-footer {
   background-color: #f3f3f3;

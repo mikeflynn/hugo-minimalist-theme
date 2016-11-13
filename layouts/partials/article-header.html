@@ -1,3 +1,7 @@
+{{ if .Params.image }}
+<div class="post-img" style="background-image: url('{{ .Params.image }}'); {{ if eq .Params.imagehgt "large" }}height: 400px{{ end }};"></div>
+{{ end }}
+
 {{ if .IsPage }}
 <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
 {{ else }}

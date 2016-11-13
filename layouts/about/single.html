@@ -1,0 +1,22 @@
+{{ partial "header" . }}
+
+<div class="container clearfix">
+    <main role="main" class="content">
+        <article class="post">
+            <a class="btn home" href="{{ .Site.BaseURL }}" title="{{ .Site.Data.l10n.article.back_to_home }}">&laquo; {{ .Site.Data.l10n.article.back_to_home }}</a>
+
+            <h1>About The Ugly Donkey.com</h1>
+
+            <p>This site is written and poorly edited by me, Mike Flynn (<a href="https://twitter.com/thatmikeflynn">@thatmikeflynn</a>). I previously wrote the successful <a href="http://punchingkitty.com">Punching Kitty</a> project that was focused on news and events for St. Louis, MO, winning several awards along the way.</p>
+
+            <p>The Ugly Donkey was started in 2016, shortly after the election of Donald Trump. Why? Because I had been looking for a new writing project and figured that national politics was the best place for a laugh and some critical thinking at the moment.</p>
+
+            <p>Also, if that Gen. Mike Flynn gets a cabinet seat I gotta keep my Google juice flowing somehow.</p>
+        </article>
+
+    </main>
+
+    {{ partial "author" . }}
+</div>
+
+{{ partial "footer" . }}

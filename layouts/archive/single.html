@@ -1,0 +1,50 @@
+{{ partial "header" . }}
+
+<div class="container clearfix">
+    <main role="main" class="content">
+        <article class="post">
+            <a class="btn home" href="{{ .Site.BaseURL }}" title="{{ .Site.Data.l10n.article.back_to_home }}">&laquo; {{ .Site.Data.l10n.article.back_to_home }}</a>
+
+            <h1>Archives + Search</h1>
+
+            <p>It's pretty early in the what will some day be the sprawling empire that is The Ugly Donkey, but go ahead and knock yourself out on the search anyway.</p>
+
+            <h2>Search</h2>
+
+            <form method="get" action="http://www.google.com/search" target="_blank">
+              <input type="text" name="q" maxlength="255">
+              <input type="hidden" name="domains" value="http://theuglydonkey.com">
+              <input type="hidden" name="sitesearch" value="http://theuglydonkey.com">
+              <input type="submit" name="sa" value="Search »">
+            </form>
+
+            <hr />
+
+            <h2>Taxonomy</h2>
+
+            <section>
+              <ul class="taxonomy">
+                {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+                  <li><h3><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a></h3>
+                    <ul>
+                      {{ range $key, $value := $taxonomy }}
+                      <li> {{ $key }} </li>
+                            <ul>
+                            {{ range $value.Pages }}
+                                <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+                            {{ end }}
+                            </ul>
+                      {{ end }}
+                    </ul>
+                  </li>
+                {{ end }}
+              </ul>
+            </section>
+        </article>
+
+    </main>
+
+    {{ partial "author" . }}
+</div>
+
+{{ partial "footer" . }}
