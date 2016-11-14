@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ if .IsNode}}{{ .Title }} &middot; {{end}}{{ .Site.Title }}</title>
+        <title>{{ if not .IsHome}}{{ .Title }} &middot; {{end}}{{ .Site.Title }}</title>
         <meta name="author">
         <meta name="description" content="{{ .Site.Params.site_description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,18 @@
         <link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css">
         <link rel="icon" href="{{ .Site.BaseURL }}favicon.ico">
         <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png" />
+
+        <meta property="og:title" content="{{ if not .IsHome}}{{ .Title }} &middot; {{end}}{{ .Site.Title }}" />
+        <meta property="og:url" content="{{ .Permalink }}" />
+        <meta property="og:type" content="website" />
+        {{ if eq .Section "post" }}
+        <meta property="og:description" content="{{ .Summary }}" />
+        <meta property="og:image" content="{{ .Site.BaseURL }}{{ if .Params.image }}{{ .Params.image }}{{ else }}{{ .Site.Params.header_background }}{{ end }}" />
+        {{ else }}
+        <meta property="og:description" content="{{ .Site.Params.site_description }}" />
+        <meta property="og:image" content="{{ .Site.Params.header_background }}" />
+        {{ end }}
+
         <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlightjs/monokai.css">
         <script src="{{ .Site.BaseURL }}js/vendor/modernizr-2.8.0.min.js"></script>
         <style>

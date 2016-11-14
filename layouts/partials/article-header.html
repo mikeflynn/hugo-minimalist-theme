@@ -1,4 +1,4 @@
-{{ if .Params.image }}
+{{ if and (.Params.image) (not .Params.hideimage) }}
 <div class="post-img" style="background-image: url('{{ .Params.image }}'); {{ if eq .Params.imagehgt "large" }}height: 400px{{ end }};"></div>
 {{ end }}
 
