@@ -22,3 +22,9 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+// Image and video modal
+jQuery(document).ready(function() {
+    jQuery('a[href$=".gif"], a[href$=".jpg"], a[href$=".png"]').magnificPopup({type:'image'});
+    jQuery('a[href*="youtube.com/watch"]').magnificPopup({type:'iframe'})
+});
